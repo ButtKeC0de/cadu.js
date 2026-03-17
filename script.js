@@ -85,3 +85,85 @@ function exercicio_2(){
 
 }
 
+function exercicio_3(){
+
+    let numero = [];
+    let auxil = 0 ;
+    let troca = true;
+
+    for(let i = 1; i<=4; i++){
+
+        let numeros = Number (prompt("Digite o número inteiro " + i));
+
+        while(!Number.isInteger(numeros)){
+            numeros = Number(prompt("Digite um número inteiro válido!"))
+        }
+
+        numero.push(numeros);
+
+    }
+
+  
+
+        while(troca){
+
+            troca= false;
+
+                   for(let i=0; i< numeros.length - 1; i++){
+
+                      if (numero[i] < numero[i+1]){
+
+                       auxil = numero[i];
+                       numero[i] = numero[i+1];
+                       numero[i+1] = auxil;
+                       troca = true;
+
+                  }
+             }
+
+        }
+
+     alert("Numeros digitados: " + numero.join(", "));
+
+    }
+
+function exercicio_4(){
+
+    let numeros = Number(prompt("Me diga um número inteiro "));
+
+    while(!Number.isInteger(numeros)){
+         numeros = Number(prompt("Digite um número inteiro válido!"));
+    }
+
+
+    if(numero %2 ===0 ){
+  
+        numeros=numeros+1;
+        console.log(numeros + " agora é ímpar");
+
+    } else {
+    
+        numeros=numeros-1;
+        console.log(numero + " agora é par");
+
+    }
+
+    
+
+}
+
+function exercicio_5(){
+
+    let letra = prompt("Digite uma letra: ");
+
+   
+    if(letra === "a" || letra === "A" || letra === "e" || letra === "E" || letra === "i" || letra === "I" || letra ==="o" || letra === "O" || letra ==="u" || letra === "U" ){
+ 
+        console.log("A letra '" + letra + "' é uma vogal");
+    } else{
+
+        console.log("A letra '" + letra + "' é uma consoante");
+    }
+
+
+}
